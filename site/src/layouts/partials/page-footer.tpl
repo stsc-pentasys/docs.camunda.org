@@ -1,4 +1,6 @@
 
+  <script type="text/javascript">var siteMenu = <%= JSON.stringify(navigation, null, 2) %>;</script>
+  <script src="/scripts/index.js"></script>
 
   <!-- scripts -->
   <script>

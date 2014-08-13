@@ -2,6 +2,7 @@
 
 category: 'License Keys'
 title: 'License Activation'
+weight: 20
 
 ---
 
