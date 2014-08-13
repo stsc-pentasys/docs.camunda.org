@@ -2,6 +2,7 @@
 
 title: 'Downloads'
 category: 'Installation'
+weight: 20
 
 ---
 

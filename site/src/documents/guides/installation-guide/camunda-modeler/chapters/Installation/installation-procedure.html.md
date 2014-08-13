@@ -2,6 +2,7 @@
 
 title: 'Step by Step Installation'
 category: 'Installation'
+weight: 30
 
 ---
 

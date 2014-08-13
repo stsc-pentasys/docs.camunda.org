@@ -2,6 +2,7 @@
 
 title: 'NoClassDefFoundError: graphiti'
 category: 'Troubleshooting'
+weight: 10
 
 ---
 

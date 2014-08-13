@@ -2,6 +2,7 @@
 
 title: 'Requirements'
 category: 'Installation'
+weight : 10
 
 ---
 
