@@ -1,0 +1,13 @@
+---
+
+title: 'Resource Configuration'
+category: 'BPM Platform'
+weight: 10
+
+---
+
+
+The camunda BPM platform requires a set of resources that need to be configured at the application server level:
+
+* One or multiple datasources to be used by the engine.
+* A work manager for the job executor.
