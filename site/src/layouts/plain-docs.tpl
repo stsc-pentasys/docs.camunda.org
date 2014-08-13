@@ -5,5 +5,5 @@ layout: 'default'
 ---
 
 <div class="col-md-12">
-  <%- @content %>
+  <%- ''/*  @content  */ %>
 </div>

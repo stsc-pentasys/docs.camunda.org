@@ -6,7 +6,7 @@ layout: 'default'
 
 <% part = @getPages(@document) %>
 
-<%- @partial('breadcrumb.html.eco', @, {}) %>
+<%- ''/*  @partial('breadcrumb.html.eco', @, {})  */ %>
 
 <div class="col-md-3">
   <div class="docs-sidebar affix" data-spy="affix">
@@ -23,12 +23,12 @@ layout: 'default'
     <ul class="nav docs-sidenav">
       <% if part.categories.length != 1: %>
         <% for category, i in part.categories: %>
-          <li class="<%= 'active' unless i %>">
-            <a href="#<%= @linkify(category.name) %>"><%= category.name %></a>
+          <li class="<%= ''/*  'active' unless i  */ %>">
+            <a href="#<%= ''/*  @linkify(category.name)  */ %>"><%= ''/*  category.name  */ %></a>
             <ul class="nav">
               <% for page in category.pages: %>
-                <li data-nav-id="<%= @linkify(category.name, page.title) %>">
-                  <a href="#<%= @linkify(category.name, page.title) %>"><%= page.shortTitle %></a>
+                <li data-nav-id="<%= ''/*  @linkify(category.name, page.title)  */ %>">
+                  <a href="#<%= ''/*  @linkify(category.name, page.title)  */ %>"><%= ''/*  page.shortTitle  */ %></a>
                 </li>
               <% end %>
             </ul>
@@ -36,8 +36,8 @@ layout: 'default'
         <% end %>
       <% else: %>
         <% for page, i in part.categories[0].pages: %>
-          <li class="<%= 'active' unless i %>" data-nav-id="<%= @linkify(part.categories[0].name, page.title) %>">
-            <a href="#<%= @linkify(part.categories[0].name, page.title) %>"><%= page.shortTitle %></a>
+          <li class="<%= ''/*  'active' unless i  */ %>" data-nav-id="<%= ''/*  @linkify(part.categories[0].name, page.title)  */ %>">
+            <a href="#<%= ''/*  @linkify(part.categories[0].name, page.title)  */ %>"><%= ''/*  page.shortTitle  */ %></a>
           </li>
         <% end %>
       <% end %>
@@ -47,7 +47,7 @@ layout: 'default'
 
 <div class="col-md-9">
   <div class="document-header">
-    <h1><%= @getPreparedHeadline() %></h1>
+    <h1><%= ''/*  @getPreparedHeadline()  */ %></h1>
   </div>
-  <%- @partial('part-contents', @, { part: part }) %>
+  <%- ''/*  @partial('part-contents', @, { part: part })  */ %>
 </div>

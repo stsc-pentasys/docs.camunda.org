@@ -9,37 +9,39 @@
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="<%= @getPreparedDescription() %>" />
-  <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-  <meta name="author" content="<%= @site.author or '' %>" />
+  <meta name="description" content="<%= ''/*  @getPreparedDescription()  */ %>" />
+  <meta name="keywords" content="<%= ''/*  @getPreparedKeywords()  */ %>" />
+  <meta name="author" content="<%= ''/*  @site.author or ''  */ %>" />
 
-  <title><%= @getPreparedTitle() %></title>
+  <title><%= ''/*  @getPreparedTitle()  */ %></title>
 
-  <%- @getBlock('meta').toHTML() %>
+  <%- ''/*  @getBlock('meta').toHTML()  */ %>
 
   <!-- ie6-8 support of html5 elements -->
   <!--[if lt IE 9]>
     <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <base app-base="<%= @pathSeparator() %>" />
+  <base href="<%- page.basePath %>">
 
   <!-- styles -->
-  <%- @getBlock('styles').add(@commonStyles()).toHTML() %>
+  <link  rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="/assets/vendor/google-code-prettify/prettify.css" />
+  <link  rel="stylesheet" href="/assets/vendor/camunda/cabpmn/cabpmn.css" />
+  <link  rel="stylesheet" href="/assets/vendor/highlight.js/github.css" />
+
+  <link rel="stylesheet" href="/styles/style.css">
 
   <!-- favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="<%= @docUrl('app/img/favicon.ico') %>" />
+  <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico" />
 </head>
 <body data-spy="scroll" data-target=".docs-sidebar" >
 
-  <%- @partial('navigation.html.eco', @, {}) %>
+  <%= page.body %>
 
-  <%- @content %>
-
-  <%- @partial('footer.html.eco', @, {}) %>
+  <%= page.footer %>
 
   <!-- scripts -->
-  <%- @getBlock('scripts').add(@commonScripts(), { defer:false }).toHTML() %>
   <script>
     !function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];

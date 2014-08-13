@@ -9,20 +9,20 @@ layout: 'plain-docs'
 
   <% for chapter, i in @document.chapters: %>
     <div class="chapter-header">
-      <h1>Chapter <%= i + 1 %>: <%= chapter.title %></h1>
+      <h1>Chapter <%= ''/*  i + 1  */ %>: <%= ''/*  chapter.title  */ %></h1>
     </div>
 
-    <section id="ch-<%= (i + 1) %>" data-main>
+    <section id="ch-<%= ''/*  (i + 1)  */ %>" data-main>
       <% part = @getPages(chapter.part) %>
 
       <ol>
         <% for category, j in part.categories: %>
         <li>
-          <a href="#<%= @linkify('ch-' + (i + 1), category.name) %>"><%= category.name %></a>
+          <a href="#<%= ''/*  @linkify('ch-' + (i + 1), category.name)  */ %>"><%= ''/*  category.name  */ %></a>
           <ol style="list-style: lower-roman">
             <% for page, k in category.pages: %>
             <li>
-              <a href="#<%= @linkify('ch-' + (i + 1), category.name, page.title) %>"><%= page.shortTitle %></a>
+              <a href="#<%= ''/*  @linkify('ch-' + (i + 1), category.name, page.title)  */ %>"><%= ''/*  page.shortTitle  */ %></a>
             </li>
             <% end %>
           </ol>
@@ -30,7 +30,7 @@ layout: 'plain-docs'
         <% end %>
       </ol>
 
-      <%- @partial('part-contents', @, { part: part }) %>
+      <%- ''/*  @partial('part-contents', @, { part: part })  */ %>
     </section>
   <% end %>
 </div>
