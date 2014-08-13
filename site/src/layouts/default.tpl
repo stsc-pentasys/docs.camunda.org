@@ -25,12 +25,13 @@
   <base href="<%- page.basePath %>">
 
   <!-- styles -->
+  <!--
   <link  rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
   <link  rel="stylesheet" href="/assets/vendor/google-code-prettify/prettify.css" />
   <link  rel="stylesheet" href="/assets/vendor/camunda/cabpmn/cabpmn.css" />
   <link  rel="stylesheet" href="/assets/vendor/highlight.js/github.css" />
-
-  <link rel="stylesheet" href="/styles/style.css">
+  -->
+  <link rel="stylesheet" href="/styles/styles.css">
 
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico" />
