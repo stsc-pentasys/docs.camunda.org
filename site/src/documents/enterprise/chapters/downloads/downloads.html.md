@@ -2,7 +2,7 @@
 
 category: 'Downloads'
 title: 'Latest Version'
-
+weight: 10
 ---
 
 

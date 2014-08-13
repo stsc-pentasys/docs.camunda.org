@@ -2,6 +2,7 @@
 
 title: 'Maven Coordinates'
 category: 'Maven Coordinates'
+weight: 10
 
 ---
 

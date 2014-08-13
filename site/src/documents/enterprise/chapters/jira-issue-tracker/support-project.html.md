@@ -2,6 +2,7 @@
 
 category: 'JIRA Issue Tracker'
 title: 'Support Project'
+weight: 20
 
 ---
 

@@ -2,6 +2,7 @@
 
 category: 'License Keys'
 title: 'License Check'
+weight: 10
 
 ---
 
