@@ -29,7 +29,7 @@ Once all tools are installed, you can build the site:
 Have fun.
 
 
-Modifying contect
+Modifying content
 -----------------
 
 To modify content of a page, you can use our awesome hacking optionz
