@@ -13,7 +13,7 @@
   <meta name="keywords" content="<%= ''/*  @getPreparedKeywords()  */ %>" />
   <meta name="author" content="<%= ''/*  @site.author or ''  */ %>" />
 
-  <title><%= ''/*  @getPreparedTitle()  */ %></title>
+  <title><%- page.title %></title>
 
   <%- ''/*  @getBlock('meta').toHTML()  */ %>
 
@@ -21,9 +21,9 @@
   <!--[if lt IE 9]>
     <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
+<!--
   <base href="<%- page.basePath %>">
-
+ -->
   <!-- styles -->
   <!--
   <link  rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
@@ -38,6 +38,8 @@
 </head>
 <body data-spy="scroll" data-target=".docs-sidebar" >
 
+  <%= partial('breadcrumbs') %>
+
   <div class="col-md-3">
     <div class="document-header">
       <%= page.header %>
@@ -49,7 +51,7 @@
       <h1><%= page.title %></h1>
     </div>
 
-    <div class="document-header">
+    <div>
       <%= page.body %>
     </div>
   </div>
