@@ -35,7 +35,7 @@ Modifying contect
 To modify content of a page, you can use our awesome hacking optionz
 
 1. Open a page to modify
-2. Enable _editing_ mode by hitting **Ctrl** and **E**
+2. Enable _editing_ mode by hitting **Ctrl** and **E**   
   a) Alternatively, you can open the _editing_ mode in a seperate window by hitting **Ctrl**, **Alt** and **E**
 3. _Save_ your changes by hitting **Ctrl** and **S**
 4. Leave _editing mode_ by hitting **Ctrl** and **E**
