@@ -1,7 +1,7 @@
 ---
 
 title: 'Introduction'
-category: 'Enterprise Space'
+category: 'Introduction'
 weight: 10
 
 ---
