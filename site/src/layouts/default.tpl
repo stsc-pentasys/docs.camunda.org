@@ -9,70 +9,45 @@
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="<%= ''/*  @getPreparedDescription()  */ %>" />
-  <meta name="keywords" content="<%= ''/*  @getPreparedKeywords()  */ %>" />
-  <meta name="author" content="<%= ''/*  @site.author or ''  */ %>" />
+  <meta name="description" content="<%- page.description %>" />
+  <meta name="author" content="<%- page.author %>" />
 
   <title><%- page.title %></title>
-
-  <%- ''/*  @getBlock('meta').toHTML()  */ %>
 
   <!-- ie6-8 support of html5 elements -->
   <!--[if lt IE 9]>
     <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-<!--
+  <!--
   <base href="<%- page.basePath %>">
  -->
-  <!-- styles -->
-  <!--
-  <link  rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
-  <link  rel="stylesheet" href="/assets/vendor/google-code-prettify/prettify.css" />
-  <link  rel="stylesheet" href="/assets/vendor/camunda/cabpmn/cabpmn.css" />
-  <link  rel="stylesheet" href="/assets/vendor/highlight.js/github.css" />
-  -->
+
   <link rel="stylesheet" href="/styles/styles.css">
 
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico" />
 </head>
 <body data-spy="scroll" data-target=".docs-sidebar" >
+  <%= page.header %>
 
-  <%= partial('breadcrumbs') %>
 
-  <div class="col-md-3">
-    <div class="document-header">
-      <%= page.header %>
-    </div>
-  </div>
+  <%= page.breadcrumbs %>
 
-  <div class="col-md-9">
-    <div class="document-header">
-      <h1><%= page.title %></h1>
-    </div>
+  <div class="container">
+    <div class="row">
+      <%= page.sidebar %>
 
-    <div>
-      <%= page.body %>
+      <div class="col-md-<%- (page.sidebar ? '9 col-md-offset-3' : 12) %>">
+        <div class="document-header">
+          <h1><%= page.title %></h1>
+        </div>
+
+        <%= page.body %>
+      </div>
     </div>
   </div>
 
 
   <%= page.footer %>
-
-  <!-- scripts -->
-  <script>
-    !function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.async=true;
-        js.defer='defer';
-        js.src = "//platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-    }(document, "script", "twitter-wjs");
-  </script>
-
 </body>
 </html>

@@ -9,7 +9,7 @@
 
           <% if (page.parents) { _.each(page.parents, function(parent, index) { %>
           <li>
-            <a href="<%- '' %>"><%- parent %></a>
+            <a href="<%- page.basePath %><%- parent.url %>"><%- parent.title %></a>
           </li>
           <% }); } %>
 
